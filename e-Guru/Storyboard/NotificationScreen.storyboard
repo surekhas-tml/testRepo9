@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="17G65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Notification View Controller-->
+        <scene sceneID="wuQ-ye-Bof">
+            <objects>
+                <viewController id="A9j-80-8g7" customClass="NotificationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FGN-po-isx"/>
+                        <viewControllerLayoutGuide type="bottom" id="4JK-40-NIQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xD6-Wp-6x3">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="54" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="cch-d9-1uf">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="NotificationCell" id="Hru-Wh-Uj3" customClass="NotificationsTableViewCell">
+                                        <rect key="frame" x="0.0" y="56" width="1024" height="54"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hru-Wh-Uj3" id="HBJ-Kg-g4G">
+                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="53"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="guJ-IP-hT5">
+                                                    <rect key="frame" x="16" y="28" width="1000" height="17"/>
+                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4m-UZ-96W">
+                                                    <rect key="frame" x="16" y="8" width="1000" height="12"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="12" id="CTC-b9-DcM"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="10"/>
+                                                    <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="guJ-IP-hT5" firstAttribute="top" secondItem="I4m-UZ-96W" secondAttribute="bottom" constant="8" id="8gP-jj-NSx"/>
+                                                <constraint firstItem="I4m-UZ-96W" firstAttribute="top" secondItem="HBJ-Kg-g4G" secondAttribute="top" constant="8" id="8r8-c1-qsC"/>
+                                                <constraint firstItem="guJ-IP-hT5" firstAttribute="leading" secondItem="HBJ-Kg-g4G" secondAttribute="leading" constant="16" id="F4P-UX-yhd"/>
+                                                <constraint firstAttribute="trailing" secondItem="I4m-UZ-96W" secondAttribute="trailing" constant="8" id="OzT-hZ-rHV"/>
+                                                <constraint firstAttribute="bottom" secondItem="guJ-IP-hT5" secondAttribute="bottom" constant="8" id="ZkJ-UW-WfF"/>
+                                                <constraint firstAttribute="trailing" secondItem="guJ-IP-hT5" secondAttribute="trailing" constant="8" id="h8u-V0-2NF"/>
+                                                <constraint firstItem="I4m-UZ-96W" firstAttribute="leading" secondItem="HBJ-Kg-g4G" secondAttribute="leading" constant="16" id="sxa-xI-rd7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="notificationTextLabel" destination="guJ-IP-hT5" id="V96-AM-5me"/>
+                                            <outlet property="notificationTime" destination="I4m-UZ-96W" id="Sib-aV-ZSt"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="A9j-80-8g7" id="sSW-B5-5Ip"/>
+                                    <outlet property="delegate" destination="A9j-80-8g7" id="6lu-nr-Z9w"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="cch-d9-1uf" secondAttribute="trailing" id="97T-7U-x00"/>
+                            <constraint firstItem="cch-d9-1uf" firstAttribute="top" secondItem="xD6-Wp-6x3" secondAttribute="top" id="GLW-dF-jtZ"/>
+                            <constraint firstItem="4JK-40-NIQ" firstAttribute="top" secondItem="cch-d9-1uf" secondAttribute="bottom" id="dTw-OC-ngJ"/>
+                            <constraint firstItem="cch-d9-1uf" firstAttribute="leading" secondItem="xD6-Wp-6x3" secondAttribute="leading" id="qIu-bq-a9g"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="IvS-Yp-I3F"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="notificationsTableView" destination="cch-d9-1uf" id="LED-5Y-UMo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zGc-sE-181" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1208.203125" y="-270.3125"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RkR-Ug-mgP">
+            <objects>
+                <navigationController storyboardIdentifier="NotificationScreenNav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="S4u-gj-2AE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Is5-tJ-uje">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="A9j-80-8g7" kind="relationship" relationship="rootViewController" id="1xF-M9-vs3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dAc-of-6VW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1925" y="-270"/>
+        </scene>
+    </scenes>
+</document>

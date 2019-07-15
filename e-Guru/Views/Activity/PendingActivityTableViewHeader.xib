@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PendingActivityTableViewHeader">
+            <connections>
+                <outlet property="activityStatus" destination="NXC-B8-l9Y" id="l8C-SE-nbX"/>
+                <outlet property="activityType" destination="Abf-GC-8sj" id="30R-z9-ru8"/>
+                <outlet property="comment" destination="AYw-ZD-d0b" id="mVf-vK-n8P"/>
+                <outlet property="planedDate" destination="vug-vF-2S3" id="qO4-ga-tR0"/>
+                <outlet property="plannedTime" destination="IUf-nn-bm8" id="lwZ-Cl-U5a"/>
+                <outlet property="view" destination="iN0-l3-epB" id="nOO-vY-I0x"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="855" height="30"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLANNED DATE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vug-vF-2S3">
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.07710451068510446" green="0.42523346862953731" blue="0.84112919314863721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLANNED TIME" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUf-nn-bm8">
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.07710451068510446" green="0.42523346862953731" blue="0.84112919314863721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACTIVITY TYPE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Abf-GC-8sj">
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.07710451068510446" green="0.42523346862953731" blue="0.84112919314863721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACTIVITY STATUS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXC-B8-l9Y">
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.07710451068510446" green="0.42523346862953731" blue="0.84112919314863721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COMMENT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYw-ZD-d0b">
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.07710451068510446" green="0.42523346862953731" blue="0.84112919314863721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Abf-GC-8sj" secondAttribute="bottom" id="1RR-ew-Mqm"/>
+                <constraint firstItem="AYw-ZD-d0b" firstAttribute="leading" secondItem="NXC-B8-l9Y" secondAttribute="trailing" id="1rK-MS-WMo"/>
+                <constraint firstAttribute="trailing" secondItem="AYw-ZD-d0b" secondAttribute="trailing" constant="35" id="4cl-Rw-u5X"/>
+                <constraint firstItem="NXC-B8-l9Y" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="DJp-2e-xPB"/>
+                <constraint firstItem="vug-vF-2S3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Fdu-RP-VDK"/>
+                <constraint firstItem="NXC-B8-l9Y" firstAttribute="width" secondItem="vug-vF-2S3" secondAttribute="width" id="KMP-fA-wVQ"/>
+                <constraint firstItem="vug-vF-2S3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="L4b-i6-QT8"/>
+                <constraint firstAttribute="bottom" secondItem="IUf-nn-bm8" secondAttribute="bottom" id="Mav-3a-X2c"/>
+                <constraint firstItem="AYw-ZD-d0b" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="VYv-yj-h8m"/>
+                <constraint firstItem="Abf-GC-8sj" firstAttribute="leading" secondItem="IUf-nn-bm8" secondAttribute="trailing" id="Zgc-89-ZRi"/>
+                <constraint firstItem="IUf-nn-bm8" firstAttribute="leading" secondItem="vug-vF-2S3" secondAttribute="trailing" id="a23-vc-hJw"/>
+                <constraint firstItem="AYw-ZD-d0b" firstAttribute="width" secondItem="NXC-B8-l9Y" secondAttribute="width" multiplier="2:1" id="guF-fN-G3k"/>
+                <constraint firstItem="NXC-B8-l9Y" firstAttribute="leading" secondItem="Abf-GC-8sj" secondAttribute="trailing" id="j7o-yZ-vaF"/>
+                <constraint firstItem="IUf-nn-bm8" firstAttribute="width" secondItem="vug-vF-2S3" secondAttribute="width" id="kVn-qc-xlg"/>
+                <constraint firstAttribute="bottom" secondItem="NXC-B8-l9Y" secondAttribute="bottom" id="naE-TK-Uyu"/>
+                <constraint firstAttribute="bottom" secondItem="AYw-ZD-d0b" secondAttribute="bottom" id="nnw-TX-5gA"/>
+                <constraint firstItem="Abf-GC-8sj" firstAttribute="height" secondItem="vug-vF-2S3" secondAttribute="height" id="oNP-Zy-2v6"/>
+                <constraint firstAttribute="bottom" secondItem="vug-vF-2S3" secondAttribute="bottom" id="pEF-1X-0YO"/>
+                <constraint firstItem="NXC-B8-l9Y" firstAttribute="height" secondItem="vug-vF-2S3" secondAttribute="height" id="pfJ-4B-p2E"/>
+                <constraint firstItem="IUf-nn-bm8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="pyo-qU-fsW"/>
+                <constraint firstItem="IUf-nn-bm8" firstAttribute="height" secondItem="vug-vF-2S3" secondAttribute="height" id="qsR-mD-jO9"/>
+                <constraint firstItem="Abf-GC-8sj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="tm6-Pd-Y5z"/>
+                <constraint firstItem="Abf-GC-8sj" firstAttribute="width" secondItem="vug-vF-2S3" secondAttribute="width" id="wyh-j6-EcL"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="273.5" y="-258.5"/>
+        </view>
+    </objects>
+</document>

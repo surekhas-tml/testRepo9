@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NFAStepView">
+            <connections>
+                <outlet property="button" destination="gJp-SQ-mV6" id="vNU-ld-OT8"/>
+                <outlet property="checkMarkImageView" destination="yXK-Mo-lvk" id="RIG-5a-XoT"/>
+                <outlet property="stepNameLabel" destination="rT1-8L-p8O" id="CZs-yi-yhh"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="BhU-r9-9ew">
+            <rect key="frame" x="0.0" y="0.0" width="156" height="59"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Position" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rT1-8L-p8O">
+                    <rect key="frame" x="0.0" y="0.0" width="118" height="19"/>
+                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
+                    <color key="textColor" red="0.1333333333" green="0.45098039220000002" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check_mark" translatesAutoresizingMaskIntoConstraints="NO" id="yXK-Mo-lvk">
+                    <rect key="frame" x="123" y="-1" width="20" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="WHD-eH-H3Z"/>
+                        <constraint firstAttribute="height" constant="21" id="ggS-Xk-gEh"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJp-SQ-mV6">
+                    <rect key="frame" x="0.0" y="0.0" width="156" height="59"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="gJp-SQ-mV6" firstAttribute="leading" secondItem="BhU-r9-9ew" secondAttribute="leading" id="0Bf-FM-pUA"/>
+                <constraint firstItem="yXK-Mo-lvk" firstAttribute="leading" secondItem="rT1-8L-p8O" secondAttribute="trailing" constant="5" id="2gw-9Y-xoA"/>
+                <constraint firstItem="rT1-8L-p8O" firstAttribute="leading" secondItem="BhU-r9-9ew" secondAttribute="leading" id="3Zu-46-OdQ"/>
+                <constraint firstItem="rT1-8L-p8O" firstAttribute="top" secondItem="BhU-r9-9ew" secondAttribute="top" id="4mC-Lc-w5S"/>
+                <constraint firstItem="yXK-Mo-lvk" firstAttribute="centerY" secondItem="rT1-8L-p8O" secondAttribute="centerY" id="8aT-jU-CdU"/>
+                <constraint firstItem="gJp-SQ-mV6" firstAttribute="top" secondItem="BhU-r9-9ew" secondAttribute="top" id="LHO-c5-QGP"/>
+                <constraint firstAttribute="trailing" secondItem="gJp-SQ-mV6" secondAttribute="trailing" id="USu-t1-PTC"/>
+                <constraint firstAttribute="bottom" secondItem="gJp-SQ-mV6" secondAttribute="bottom" id="lbP-OV-3nx"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-488" y="-229.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="check_mark" width="12" height="12"/>
+    </resources>
+</document>

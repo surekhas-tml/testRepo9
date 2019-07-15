@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NFARequestTabsView">
+            <connections>
+                <outlet property="button" destination="kEa-GN-n8c" id="DxL-31-9Ho"/>
+                <outlet property="statusView" destination="QDM-Ev-7At" id="N1a-u1-CRr"/>
+                <outlet property="titleLabel" destination="sE1-63-qhU" id="CBk-go-RA9"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="184" height="69"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="kEa-GN-n8c">
+                    <rect key="frame" x="0.0" y="0.0" width="184" height="69"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <inset key="titleEdgeInsets" minX="0.0" minY="15" maxX="0.0" maxY="0.0"/>
+                    <state key="normal">
+                        <color key="titleColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QDM-Ev-7At" customClass="CircularView">
+                    <rect key="frame" x="88" y="5" width="8" height="8"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="8" id="deh-IP-dlz"/>
+                        <constraint firstAttribute="width" constant="8" id="vjX-BR-9MV"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sE1-63-qhU">
+                    <rect key="frame" x="79.5" y="18" width="25.5" height="14"/>
+                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                    <color key="textColor" red="0.1333333333" green="0.45098039220000002" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="kEa-GN-n8c" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="6Gy-Wa-4wq"/>
+                <constraint firstItem="QDM-Ev-7At" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Eco-v2-Twm"/>
+                <constraint firstItem="sE1-63-qhU" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Grz-ZF-P9b"/>
+                <constraint firstItem="QDM-Ev-7At" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="Xbm-CS-g7O"/>
+                <constraint firstAttribute="bottom" secondItem="kEa-GN-n8c" secondAttribute="bottom" id="b6V-mJ-wNm"/>
+                <constraint firstItem="sE1-63-qhU" firstAttribute="top" secondItem="QDM-Ev-7At" secondAttribute="bottom" constant="5" id="d57-Dz-r4n"/>
+                <constraint firstItem="kEa-GN-n8c" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="mw4-hV-88u"/>
+                <constraint firstAttribute="trailing" secondItem="kEa-GN-n8c" secondAttribute="trailing" id="qGx-HI-LDn"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-348" y="-99"/>
+        </view>
+    </objects>
+</document>

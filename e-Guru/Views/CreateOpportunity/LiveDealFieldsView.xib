@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LiveDealFieldsView">
+            <connections>
+                <outlet property="fieldsContainer" destination="2qY-ED-y5Y" id="YTt-jJ-VEA"/>
+                <outlet property="liveDealToggleSwitch" destination="KJ7-zu-Ywz" id="hyf-Jo-0Hv"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LiveDealFieldsView">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="151"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2qY-ED-y5Y">
+                    <rect key="frame" x="0.0" y="39" width="1024" height="112"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Live Deal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGc-Lj-znr">
+                    <rect key="frame" x="0.0" y="5" width="88" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="OYR-n5-1uV"/>
+                        <constraint firstAttribute="width" constant="88" id="g0F-Rc-8eg"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
+                    <color key="textColor" red="0.1333333333" green="0.45098039220000002" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KJ7-zu-Ywz">
+                    <rect key="frame" x="96" y="0.0" width="51" height="31"/>
+                </switch>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="nGc-Lj-znr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="2ZQ-QO-diu"/>
+                <constraint firstAttribute="bottom" secondItem="2qY-ED-y5Y" secondAttribute="bottom" id="47W-PU-a2u"/>
+                <constraint firstItem="2qY-ED-y5Y" firstAttribute="top" secondItem="nGc-Lj-znr" secondAttribute="bottom" constant="13" id="73m-Us-8HT"/>
+                <constraint firstItem="KJ7-zu-Ywz" firstAttribute="leading" secondItem="nGc-Lj-znr" secondAttribute="trailing" constant="8" id="cwV-vp-baU"/>
+                <constraint firstItem="nGc-Lj-znr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="fk1-Xc-QQO"/>
+                <constraint firstAttribute="trailing" secondItem="2qY-ED-y5Y" secondAttribute="trailing" id="gUp-q6-Hk0"/>
+                <constraint firstItem="KJ7-zu-Ywz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hWw-bH-XoI"/>
+                <constraint firstItem="2qY-ED-y5Y" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="zEp-nU-tr8"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-480" y="-25.5"/>
+        </view>
+    </objects>
+</document>

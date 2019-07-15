@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ResultTwoLabelTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="350" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="350" height="59"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kTi-3o-iUG">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="Jdf-qa-sWi"/>
+                            <constraint firstAttribute="width" constant="334" id="KIt-bq-Fgw"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L0z-lV-9Lf">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="334" id="CQF-CP-7qa"/>
+                            <constraint firstAttribute="height" constant="20" id="py0-WV-h00"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="L0z-lV-9Lf" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="qS4-a8-5hD"/>
+                    <constraint firstItem="kTi-3o-iUG" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="s9b-vC-aty"/>
+                    <constraint firstItem="L0z-lV-9Lf" firstAttribute="top" secondItem="kTi-3o-iUG" secondAttribute="bottom" constant="3" id="viU-1J-Lt2"/>
+                    <constraint firstItem="kTi-3o-iUG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="whS-Gf-7Tq"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="nameLabel" destination="kTi-3o-iUG" id="lgv-uK-aHc"/>
+                <outlet property="numberLabel" destination="L0z-lV-9Lf" id="PdF-ja-ISX"/>
+            </connections>
+            <point key="canvasLocation" x="9" y="7"/>
+        </tableViewCell>
+    </objects>
+</document>

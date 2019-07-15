@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AssignTO">
+            <connections>
+                <outlet property="currentAssignment" destination="Pby-fs-eFi" id="KUL-ud-dFN"/>
+                <outlet property="pickerView" destination="3Qu-V3-GsW" id="GbL-Xm-YQt"/>
+                <outlet property="view" destination="iN0-l3-epB" id="W7X-eJ-SdV"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="570" height="342"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VCO-cb-XBq">
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Assign to DSE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vaj-Sb-Rz5">
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="jNe-5N-jXS"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <color key="textColor" red="0.14574000240000001" green="0.47869747880000002" blue="0.72467052939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currently assigned to :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44i-Yh-sDP">
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.14574000240000001" green="0.47869747880000002" blue="0.72467052939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pby-fs-eFi">
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.14574000240000001" green="0.47869747880000002" blue="0.72467052939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e6E-3C-uhc">
+                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="Jrp-e2-Hym"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="44i-Yh-sDP" firstAttribute="leading" secondItem="VCO-cb-XBq" secondAttribute="leading" constant="20" id="0jB-Ia-wbD"/>
+                        <constraint firstAttribute="trailing" secondItem="e6E-3C-uhc" secondAttribute="trailing" constant="20" id="1z3-up-9sb"/>
+                        <constraint firstItem="Pby-fs-eFi" firstAttribute="leading" secondItem="44i-Yh-sDP" secondAttribute="trailing" constant="5" id="95h-AQ-rWN"/>
+                        <constraint firstItem="vaj-Sb-Rz5" firstAttribute="centerX" secondItem="VCO-cb-XBq" secondAttribute="centerX" id="BGH-Wv-LRV"/>
+                        <constraint firstItem="Pby-fs-eFi" firstAttribute="width" secondItem="44i-Yh-sDP" secondAttribute="width" id="K92-8E-Uou"/>
+                        <constraint firstItem="44i-Yh-sDP" firstAttribute="top" secondItem="vaj-Sb-Rz5" secondAttribute="bottom" id="Tui-Ah-XU8"/>
+                        <constraint firstAttribute="bottom" secondItem="44i-Yh-sDP" secondAttribute="bottom" id="c0m-yH-Up3"/>
+                        <constraint firstAttribute="bottom" secondItem="e6E-3C-uhc" secondAttribute="bottom" id="lnX-Uf-sHf"/>
+                        <constraint firstItem="e6E-3C-uhc" firstAttribute="leading" secondItem="VCO-cb-XBq" secondAttribute="leading" constant="20" id="qbJ-Gg-dUI"/>
+                        <constraint firstAttribute="trailing" secondItem="Pby-fs-eFi" secondAttribute="trailing" id="suT-8b-H7T"/>
+                        <constraint firstItem="Pby-fs-eFi" firstAttribute="height" secondItem="44i-Yh-sDP" secondAttribute="height" id="tqL-7V-R11"/>
+                        <constraint firstItem="Pby-fs-eFi" firstAttribute="top" secondItem="44i-Yh-sDP" secondAttribute="top" id="xma-Dl-gLd"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v3U-Ra-NbW">
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t6T-gA-vAe" customClass="BlueUIButton">
+                            <color key="backgroundColor" red="0.14574000240000001" green="0.47869747880000002" blue="0.72467052939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="Cancel">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="cancelAction:" destination="-1" eventType="touchUpInside" id="5Yx-Rm-JSU"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JZj-qK-jug" customClass="BlueUIButton">
+                            <color key="backgroundColor" red="0.14574000240000001" green="0.47869747880000002" blue="0.72467052939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="Assign">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="assignToSelectedDSE:" destination="-1" eventType="touchUpInside" id="tYt-6J-FUc"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="t6T-gA-vAe" firstAttribute="top" secondItem="v3U-Ra-NbW" secondAttribute="top" constant="16.5" id="Fm2-UM-S9d"/>
+                        <constraint firstItem="t6T-gA-vAe" firstAttribute="leading" secondItem="v3U-Ra-NbW" secondAttribute="leading" constant="50" id="fSW-Sr-Kbf"/>
+                        <constraint firstItem="JZj-qK-jug" firstAttribute="top" secondItem="v3U-Ra-NbW" secondAttribute="top" constant="16.5" id="lUV-76-imU"/>
+                        <constraint firstItem="JZj-qK-jug" firstAttribute="width" secondItem="t6T-gA-vAe" secondAttribute="width" id="qzI-Dp-Q8s"/>
+                        <constraint firstItem="JZj-qK-jug" firstAttribute="leading" secondItem="t6T-gA-vAe" secondAttribute="trailing" constant="270" id="san-UR-6pl"/>
+                        <constraint firstItem="JZj-qK-jug" firstAttribute="height" secondItem="t6T-gA-vAe" secondAttribute="height" id="w5B-2H-Oed"/>
+                        <constraint firstAttribute="trailing" secondItem="JZj-qK-jug" secondAttribute="trailing" constant="50" id="wjw-CH-aTH"/>
+                    </constraints>
+                </view>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Qu-V3-GsW">
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="c2z-y3-YnR"/>
+                        <outlet property="delegate" destination="-1" id="gH0-Lx-drZ"/>
+                    </connections>
+                </pickerView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="VCO-cb-XBq" secondAttribute="trailing" id="2Q9-Yn-cBl"/>
+                <constraint firstItem="3Qu-V3-GsW" firstAttribute="top" secondItem="VCO-cb-XBq" secondAttribute="bottom" id="7tF-OO-k8F"/>
+                <constraint firstItem="VCO-cb-XBq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="EbG-O8-2FW"/>
+                <constraint firstItem="VCO-cb-XBq" firstAttribute="height" secondItem="v3U-Ra-NbW" secondAttribute="height" id="Gbm-MW-D4u"/>
+                <constraint firstItem="3Qu-V3-GsW" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="OOC-Xd-1uJ"/>
+                <constraint firstItem="v3U-Ra-NbW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Wj4-Ea-gYp"/>
+                <constraint firstItem="v3U-Ra-NbW" firstAttribute="top" secondItem="3Qu-V3-GsW" secondAttribute="bottom" id="YlC-xQ-OZi"/>
+                <constraint firstItem="3Qu-V3-GsW" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="bhy-XR-sDg"/>
+                <constraint firstAttribute="trailing" secondItem="v3U-Ra-NbW" secondAttribute="trailing" id="fA9-BS-pKl"/>
+                <constraint firstItem="VCO-cb-XBq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="h1U-37-PVd"/>
+                <constraint firstAttribute="trailing" secondItem="3Qu-V3-GsW" secondAttribute="trailing" id="hVa-Ve-9M0"/>
+                <constraint firstItem="3Qu-V3-GsW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ous-fE-DLH"/>
+                <constraint firstAttribute="bottom" secondItem="v3U-Ra-NbW" secondAttribute="bottom" id="zrf-Ja-rTD"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="106" y="-138"/>
+        </view>
+    </objects>
+</document>

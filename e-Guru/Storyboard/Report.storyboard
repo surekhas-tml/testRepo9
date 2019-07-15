@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="17G65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Report View Controller-->
+        <scene sceneID="cf7-98-Jr6">
+            <objects>
+                <viewController id="kj8-Z7-aie" customClass="ReportViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VPB-1Q-y8h"/>
+                        <viewControllerLayoutGuide type="bottom" id="B5a-i1-Chg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qG0-Nk-VRg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J8q-sx-fhu">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="kj8-Z7-aie" id="el3-Yr-5VD"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="J8q-sx-fhu" secondAttribute="trailing" id="EYd-7H-5dU"/>
+                            <constraint firstItem="J8q-sx-fhu" firstAttribute="leading" secondItem="qG0-Nk-VRg" secondAttribute="leading" id="aM9-p4-nbC"/>
+                            <constraint firstItem="J8q-sx-fhu" firstAttribute="top" secondItem="qG0-Nk-VRg" secondAttribute="top" id="ea5-Yu-gUa"/>
+                            <constraint firstItem="B5a-i1-Chg" firstAttribute="top" secondItem="J8q-sx-fhu" secondAttribute="bottom" id="lOS-4p-Ufq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gld-qX-Rbc"/>
+                    <connections>
+                        <outlet property="report_webview" destination="J8q-sx-fhu" id="4Qh-KH-8g5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="igj-c5-EXe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="295" y="132"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZZB-tY-8ru">
+            <objects>
+                <navigationController storyboardIdentifier="ReportViewControllerNav" automaticallyAdjustsScrollViewInsets="NO" id="nqk-LH-jRt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9uV-Jd-w7N">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kj8-Z7-aie" kind="relationship" relationship="rootViewController" id="7jz-zj-lGt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eQm-a6-sUs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-719" y="142"/>
+        </scene>
+    </scenes>
+</document>

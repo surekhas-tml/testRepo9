@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LinkCampaignView">
+            <connections>
+                <outlet property="cancelButton" destination="WvG-yJ-wPL" id="bOv-1W-PoZ"/>
+                <outlet property="linkButton" destination="pzZ-PR-o8E" id="Oli-Gd-71P"/>
+                <outlet property="pickerView" destination="o4b-bU-anu" id="nZN-AB-ShD"/>
+                <outlet property="view" destination="iN0-l3-epB" id="0Cs-oL-u4s"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="338" height="277"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o4b-bU-anu">
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="soE-qd-r5l"/>
+                    </connections>
+                </pickerView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qbE-uw-9W9">
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pzZ-PR-o8E" customClass="BlueUIButton">
+                            <color key="backgroundColor" red="0.10585664957761765" green="0.44508612155914307" blue="0.71915298700332642" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="Link">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="linkCampaign:" destination="-1" eventType="touchUpInside" id="zVc-4V-Jvy"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WvG-yJ-wPL" customClass="BlueUIButton">
+                            <color key="backgroundColor" red="0.10585664957761765" green="0.44508612155914307" blue="0.71915298700332642" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="Cancel">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="cancelCampaignLinkage:" destination="-1" eventType="touchUpInside" id="9da-XP-zfu"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="pzZ-PR-o8E" firstAttribute="leading" secondItem="WvG-yJ-wPL" secondAttribute="trailing" constant="78" id="Lve-iv-BEO"/>
+                        <constraint firstItem="WvG-yJ-wPL" firstAttribute="leading" secondItem="qbE-uw-9W9" secondAttribute="leading" constant="30" id="S2I-fT-9Jr"/>
+                        <constraint firstItem="WvG-yJ-wPL" firstAttribute="width" secondItem="pzZ-PR-o8E" secondAttribute="width" id="Za0-Mo-bVs"/>
+                        <constraint firstItem="WvG-yJ-wPL" firstAttribute="height" secondItem="pzZ-PR-o8E" secondAttribute="height" id="ZwL-iR-VxN"/>
+                        <constraint firstItem="pzZ-PR-o8E" firstAttribute="top" secondItem="qbE-uw-9W9" secondAttribute="top" constant="-1" id="a5L-uD-t27"/>
+                        <constraint firstItem="WvG-yJ-wPL" firstAttribute="top" secondItem="qbE-uw-9W9" secondAttribute="top" constant="-1" id="b6j-1E-Ng3"/>
+                        <constraint firstAttribute="trailing" secondItem="pzZ-PR-o8E" secondAttribute="trailing" constant="30" id="kuO-2q-dRB"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sK1-Bl-ZEs">
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Link Campaign" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9e3-1H-vNG">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <color key="textColor" red="0.075421544777813126" green="0.35679177095925874" blue="0.65557426456267454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OkW-Ge-Hsg">
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="hx6-mC-9gR"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="OkW-Ge-Hsg" secondAttribute="trailing" constant="20" id="7A4-ba-0Xm"/>
+                        <constraint firstItem="9e3-1H-vNG" firstAttribute="centerX" secondItem="sK1-Bl-ZEs" secondAttribute="centerX" id="AiW-G8-2Jq"/>
+                        <constraint firstItem="OkW-Ge-Hsg" firstAttribute="leading" secondItem="sK1-Bl-ZEs" secondAttribute="leading" constant="20" id="Fzo-zM-GYL"/>
+                        <constraint firstItem="OkW-Ge-Hsg" firstAttribute="top" secondItem="9e3-1H-vNG" secondAttribute="bottom" constant="10" id="hjp-R8-Wi7"/>
+                        <constraint firstItem="9e3-1H-vNG" firstAttribute="centerY" secondItem="sK1-Bl-ZEs" secondAttribute="centerY" id="kC3-Hc-HQK"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the campaign" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4N-1f-N8X">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="X4H-90-rqx"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="o4b-bU-anu" firstAttribute="top" secondItem="J4N-1f-N8X" secondAttribute="bottom" id="2UP-wQ-MmJ"/>
+                <constraint firstAttribute="trailing" secondItem="o4b-bU-anu" secondAttribute="trailing" id="6su-i0-Ics"/>
+                <constraint firstItem="J4N-1f-N8X" firstAttribute="top" secondItem="sK1-Bl-ZEs" secondAttribute="bottom" constant="2" id="CT1-2G-xFd"/>
+                <constraint firstAttribute="trailing" secondItem="J4N-1f-N8X" secondAttribute="trailing" id="DIg-U7-oUA"/>
+                <constraint firstAttribute="bottom" secondItem="qbE-uw-9W9" secondAttribute="bottom" id="DX9-XM-tJg"/>
+                <constraint firstItem="o4b-bU-anu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="VHx-gZ-tx6"/>
+                <constraint firstItem="sK1-Bl-ZEs" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="aL9-9b-hm6"/>
+                <constraint firstAttribute="trailing" secondItem="sK1-Bl-ZEs" secondAttribute="trailing" id="ai3-2e-mO7"/>
+                <constraint firstItem="qbE-uw-9W9" firstAttribute="top" secondItem="o4b-bU-anu" secondAttribute="bottom" id="cC7-eC-gPF"/>
+                <constraint firstItem="o4b-bU-anu" firstAttribute="height" secondItem="qbE-uw-9W9" secondAttribute="height" multiplier="200:60" id="dNF-br-rHo"/>
+                <constraint firstItem="sK1-Bl-ZEs" firstAttribute="height" secondItem="qbE-uw-9W9" secondAttribute="height" id="fgx-x9-6I9"/>
+                <constraint firstAttribute="trailing" secondItem="qbE-uw-9W9" secondAttribute="trailing" id="hmA-mt-Nmk"/>
+                <constraint firstItem="qbE-uw-9W9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="vTS-XL-lGM"/>
+                <constraint firstItem="sK1-Bl-ZEs" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xEb-kn-d5w"/>
+                <constraint firstItem="J4N-1f-N8X" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xyR-gf-3k4"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="385" y="-174.5"/>
+        </view>
+    </objects>
+</document>

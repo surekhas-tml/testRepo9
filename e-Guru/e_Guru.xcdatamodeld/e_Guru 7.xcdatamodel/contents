@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="17E199" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="Account" representedClassName="AAAAccountMO" syncable="YES">
+        <attribute name="accountID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="accountName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="accountPAN" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="accountType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="contactNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="site" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toAddress" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Address" inverseName="toAccount" inverseEntity="Address" syncable="YES"/>
+        <relationship name="toContact" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Contact" inverseName="toAccount" inverseEntity="Contact" syncable="YES"/>
+        <relationship name="toOpportunity" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Opportunity" inverseName="toAccount" inverseEntity="Opportunity" syncable="YES"/>
+    </entity>
+    <entity name="Activity" representedClassName="AAAActivityMO" syncable="YES">
+        <attribute name="activityDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="activityID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="activityType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="creationDate" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="creationTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="endDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="endTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="planedDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="planedTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="taluka" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <relationship name="toOpportunity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Opportunity" syncable="YES"/>
+    </entity>
+    <entity name="Address" representedClassName="AAAAddressMO" syncable="YES">
+        <attribute name="addressID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="addressLine1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="addressLine2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="area" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="district" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="panchayat" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pin" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toAccount" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Account" inverseName="toAddress" inverseEntity="Account" syncable="YES"/>
+        <relationship name="toContact" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Contact" inverseName="toAddress" inverseEntity="Contact" syncable="YES"/>
+        <relationship name="toState" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="State" inverseName="toAddress" inverseEntity="State" syncable="YES"/>
+        <relationship name="toTaluka" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Taluka" syncable="YES"/>
+    </entity>
+    <entity name="Broker" representedClassName="AAABrokerMO" syncable="YES">
+        <attribute name="accountID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="accountName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mainPhoneNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toOpportunity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Opportunity" inverseName="toBroker" inverseEntity="Opportunity" syncable="YES"/>
+    </entity>
+    <entity name="Campaign" representedClassName="AAACampaignMO" syncable="YES">
+        <attribute name="campaignDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="campaignID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="campaignName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toOpportunity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Opportunity" inverseName="toCampaign" inverseEntity="Opportunity" syncable="YES"/>
+    </entity>
+    <entity name="Contact" representedClassName="AAAContactMO" syncable="YES">
+        <attribute name="contactID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="contactNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="emailID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fullName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="panNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="primary_account_id" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toAccount" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Account" inverseName="toContact" inverseEntity="Account" syncable="YES"/>
+        <relationship name="toAddress" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Address" inverseName="toContact" inverseEntity="Address" syncable="YES"/>
+        <relationship name="toOpportunity" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Opportunity" inverseName="toContact" inverseEntity="Opportunity" syncable="YES"/>
+    </entity>
+    <entity name="Draft" representedClassName="AAADraftMO" syncable="YES">
+        <attribute name="draftID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="userIDLink" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toOpportunity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Opportunity" syncable="YES"/>
+    </entity>
+    <entity name="DraftAccount" representedClassName="AAADraftAccountMO" syncable="YES">
+        <attribute name="draftIDAccount" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="userIDLink" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toAccount" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Account" syncable="YES"/>
+    </entity>
+    <entity name="DraftContact" representedClassName="AAADraftContactMO" syncable="YES">
+        <attribute name="draftIDContact" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="userIDLink" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toContact" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Contact" syncable="YES"/>
+    </entity>
+    <entity name="DraftFinancier" representedClassName="AAADraftFinancierMO" syncable="YES">
+        <attribute name="draftID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="userIDLink" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toInsertQuote" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FinancierInsertQuotes" syncable="YES"/>
+    </entity>
+    <entity name="Event" representedClassName="AAAEventMO" syncable="YES">
+        <attribute name="eventID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="eventName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Financier" representedClassName="AAAFinancerMO" syncable="YES">
+        <attribute name="financierID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="financierName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toOpportunity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Opportunity" inverseName="toFinancer" inverseEntity="Opportunity" syncable="YES"/>
+    </entity>
+    <entity name="FinancierAccountDetails" representedClassName="AAAFinancierAccountDetailMO" syncable="YES">
+        <attribute name="accountAddress1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="accountAddress2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="accountCityTownVillage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="accountDistrict" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="accountName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="accountNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="accountPinCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="accountSite" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="accountState" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="accountType" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toOpportunity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FinancierOpportunity" inverseName="toAccount" inverseEntity="FinancierOpportunity" syncable="YES"/>
+    </entity>
+    <entity name="FinancierContact" representedClassName="AAAFinancierContactMO" syncable="YES">
+        <attribute name="area" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="citytownvillage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="district" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mobileno" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pincode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toOpportunity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FinancierOpportunity" inverseName="toContact" inverseEntity="FinancierOpportunity" syncable="YES"/>
+    </entity>
+    <entity name="FinancierInsertQuotes" representedClassName="AAAFinancierInsertMO" syncable="YES">
+        <attribute name="account_address1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="account_address2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="account_city_town_village" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="account_district" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="account_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="account_number" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="account_pan_no_company" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="account_pincode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="account_site" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="account_state" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="account_tahsil_taluka" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="account_type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="address_type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="address1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="address2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="area" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bdm_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bdm_mobile_no" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bdm_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="body_type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="branch_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="branch_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bu_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="camp_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="camp_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="channel_type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="city_town_village" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="coapplicant_address1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="coapplicant_address2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="coapplicant_city_town_village" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="coapplicant_date_of_birth" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="coapplicant_first_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="coapplicant_last_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="coapplicant_mobile_no" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="coapplicant_pan_no_indiviual" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="coapplicant_pincode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="customer_category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="customer_category_subcategory" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="customer_type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date_of_birth" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="district" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="division_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="emission_norms" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="event_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="event_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ex_showroom_price" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="father_mother_spouse_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fin_occupation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fin_occupation_in_years" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="financier_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="financier_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="financierTMFBDMDetailsArray" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="first_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gender" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id_description" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id_expiry_date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id_issue_date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id_type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="indicative_loan_amt" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="intended_application" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="last_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="loan_tenor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="loandetails_repayable_in_months" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lob" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ltv" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mmgeo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mobile_no" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="on_road_price_total_amt" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="opty_created_date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="opty_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="organization" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="organization_code" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pan_no_company" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pan_no_indiviual" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="partydetails_annualincome" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="partydetails_maritalstatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pincode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ppl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="product_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="quantity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ref_type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="relation_type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="religion" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="repayment_mode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sales_stage_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="taluka" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="toggleMode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type_of_property" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="usage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vc_number" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vehicle_class" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vehicle_color" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="FinancierOpportunity" representedClassName="AAAFinancierOpportunityMO" syncable="YES">
+        <attribute name="isQuoteSubmitToCRm" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isQuoteSubmitToFinancier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isTimeBefore48Hours" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="optyID" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toAccount" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FinancierAccountDetails" inverseName="toOpportunity" inverseEntity="FinancierAccountDetails" syncable="YES"/>
+        <relationship name="toContact" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FinancierContact" inverseName="toOpportunity" inverseEntity="FinancierContact" syncable="YES"/>
+        <relationship name="toOpty" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FinancierOptyDetails" inverseName="toOpportunity" inverseEntity="FinancierOptyDetails" syncable="YES"/>
+        <relationship name="toSelectedFinancier" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FinancierSelectedDetails" inverseName="toOpportunity" inverseEntity="FinancierSelectedDetails" syncable="YES"/>
+    </entity>
+    <entity name="FinancierOptyDetails" representedClassName="AAAFinancierOptyDetailsMO" syncable="YES">
+        <attribute name="bodyType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="channelType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="divID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="financierName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="intendedApplication" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lob" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="optyCreatedDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="optyID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="organizationID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ppl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="quantity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="usage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vcNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toOpportunity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FinancierOpportunity" inverseName="toOpty" inverseEntity="FinancierOpportunity" syncable="YES"/>
+    </entity>
+    <entity name="FinancierSelectedDetails" representedClassName="AAAFinancierSelectedDetailMO" syncable="YES">
+        <attribute name="selectedFinancierID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="selectedFinancierName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toOpportunity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FinancierOpportunity" inverseName="toSelectedFinancier" inverseEntity="FinancierOpportunity" syncable="YES"/>
+    </entity>
+    <entity name="LobInformation" representedClassName="AAALobInformation" syncable="YES">
+        <attribute name="bodyType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="customerType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mmGeography" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="speed_governer" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tmlFleetSize" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="totalFleetSize" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="usageCategory" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vehicleApplication" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toOpportunity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Opportunity" inverseName="toLobInfo" inverseEntity="Opportunity" syncable="YES"/>
+    </entity>
+    <entity name="MMGeography" representedClassName="AAAMMGeographyMO" syncable="YES">
+        <attribute name="geographyName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lobName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toOpportunity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Opportunity" inverseName="toMMGeo" inverseEntity="Opportunity" syncable="YES"/>
+    </entity>
+    <entity name="Notification" representedClassName="AAANotification" syncable="YES">
+        <attribute name="action" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="actionName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="activityID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="loginID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="message" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notificationID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="optyID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sentDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sentDateIST" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="strIsActiveFlag" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="strSentDate" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Opportunity" representedClassName="AAAOpportunityMO">
+        <attribute name="bodyType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="businessUnit" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="channel" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="competitor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="competitorModel" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="competitorRemark" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="customerType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fromContext" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idLocal" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="influencer" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="is_Any_Case_Approved" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="is_eligible_for_insert_quote" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="is_first_case_rejected" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="is_quote_submitted_to_crm" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="is_quote_submitted_to_financier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="is_time_before_48_hours" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="leadAssignedName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="leadAssignedPhoneNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="leadAssignedPosition" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="leadAssignedPositionID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="license" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lob" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lostMake" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lostModel" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lostReson" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="opportunityCreatedDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="opportunityName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="opportunityStatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="optyID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ppl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productCatagory" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productIntegrationID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="prospectType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="quantity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="reffralType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rev_productID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="salesStageName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="saleStageUpdatedDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="saletageDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="source" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sourceOfContact" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tmlFleetSize" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="totalFleetSize" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="usageCatagory" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vhApplication" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toAccount" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Account" inverseName="toOpportunity" inverseEntity="Account" syncable="YES"/>
+        <relationship name="toBroker" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Broker" inverseName="toOpportunity" inverseEntity="Broker" syncable="YES"/>
+        <relationship name="toCampaign" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Campaign" inverseName="toOpportunity" inverseEntity="Campaign" syncable="YES"/>
+        <relationship name="toContact" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Contact" inverseName="toOpportunity" inverseEntity="Contact" syncable="YES"/>
+        <relationship name="toEvent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Event" syncable="YES"/>
+        <relationship name="toFinancer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Financier" inverseName="toOpportunity" inverseEntity="Financier" syncable="YES"/>
+        <relationship name="toLastDoneActivity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Activity" syncable="YES"/>
+        <relationship name="toLastPendingActivity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Activity" syncable="YES"/>
+        <relationship name="toLobInfo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LobInformation" inverseName="toOpportunity" inverseEntity="LobInformation" syncable="YES"/>
+        <relationship name="toMMGeo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MMGeography" inverseName="toOpportunity" inverseEntity="MMGeography" syncable="YES"/>
+        <relationship name="toRefferal" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ReferralCustomer" inverseName="toOpportunity" inverseEntity="ReferralCustomer" syncable="YES"/>
+        <relationship name="toTGM" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TGM" inverseName="toOpportunity" inverseEntity="TGM" syncable="YES"/>
+        <relationship name="toVC" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VCNumber" inverseName="toOpportunity" inverseEntity="VCNumber" syncable="YES"/>
+        <userInfo/>
+    </entity>
+    <entity name="PushNotificationToken" representedClassName="PushNotificationToken" syncable="YES">
+        <attribute name="regTokenFCM" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ReferralCustomer" representedClassName="AAAReferralCustomerMO" syncable="YES">
+        <attribute name="refferalCellPhoneNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="refferalFirstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="refferalLastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="refferalrowID" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toOpportunity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Opportunity" inverseName="toRefferal" inverseEntity="Opportunity" syncable="YES"/>
+    </entity>
+    <entity name="State" representedClassName="AAAStateMO" syncable="YES">
+        <attribute name="code" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toAddress" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Address" inverseName="toState" inverseEntity="Address" syncable="YES"/>
+    </entity>
+    <entity name="Taluka" representedClassName="AAATalukaMO" syncable="YES">
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="district" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="talukaName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toState" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="State" syncable="YES"/>
+    </entity>
+    <entity name="TGM" representedClassName="AAATGMMO" syncable="YES">
+        <attribute name="accountID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="accountName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mainPhoneNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toOpportunity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Opportunity" inverseName="toTGM" inverseEntity="Opportunity" syncable="YES"/>
+    </entity>
+    <entity name="Token" representedClassName="AAATokenMO" syncable="YES">
+        <attribute name="accessToken" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="expiresIn" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="refreshToken" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="scope" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tokenType" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="UserData" representedClassName="AAAUserDataMO" syncable="YES">
+        <attribute name="dsmName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="employeeRowID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="String" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="lob" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lobBUUnit" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lobName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lobRowID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lobServiceTaxFlag" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="String" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="organizationID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="positionID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="positionName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="positionType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="primaryEmployeeCellNum" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="primaryEmployeeID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="primaryPositionID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="VCNumber" representedClassName="AAAVCNumberMO" syncable="YES">
+        <attribute name="lob" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ppl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productName1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vcNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toOpportunity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Opportunity" inverseName="toVC" inverseEntity="Opportunity" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Account" positionX="504" positionY="17" width="128" height="210"/>
+        <element name="Activity" positionX="72" positionY="383" width="128" height="30"/>
+        <element name="Address" positionX="792" positionY="123" width="128" height="30"/>
+        <element name="Broker" positionX="234" positionY="207" width="128" height="30"/>
+        <element name="Campaign" positionX="585" positionY="540" width="128" height="103"/>
+        <element name="Contact" positionX="540" positionY="255" width="128" height="240"/>
+        <element name="Draft" positionX="63" positionY="144" width="128" height="105"/>
+        <element name="DraftAccount" positionX="36" positionY="263" width="128" height="105"/>
+        <element name="DraftContact" positionX="153" positionY="81" width="128" height="103"/>
+        <element name="DraftFinancier" positionX="-171" positionY="171" width="128" height="105"/>
+        <element name="Event" positionX="-378" positionY="636" width="128" height="75"/>
+        <element name="Financier" positionX="-2" positionY="720" width="128" height="90"/>
+        <element name="FinancierAccountDetails" positionX="-162" positionY="180" width="128" height="210"/>
+        <element name="FinancierContact" positionX="-162" positionY="180" width="128" height="195"/>
+        <element name="FinancierInsertQuotes" positionX="-162" positionY="180" width="128" height="1470"/>
+        <element name="FinancierOpportunity" positionX="216" positionY="675" width="128" height="165"/>
+        <element name="FinancierOptyDetails" positionX="-153" positionY="189" width="128" height="285"/>
+        <element name="FinancierSelectedDetails" positionX="-171" positionY="171" width="128" height="90"/>
+        <element name="LobInformation" positionX="-164" positionY="378" width="128" height="180"/>
+        <element name="MMGeography" positionX="207" positionY="180" width="128" height="30"/>
+        <element name="Notification" positionX="-180" positionY="162" width="128" height="210"/>
+        <element name="Opportunity" positionX="387" positionY="477" width="128" height="975"/>
+        <element name="PushNotificationToken" positionX="45" positionY="171" width="128" height="60"/>
+        <element name="ReferralCustomer" positionX="207" positionY="171" width="128" height="30"/>
+        <element name="State" positionX="243" positionY="216" width="128" height="30"/>
+        <element name="Taluka" positionX="252" positionY="225" width="128" height="30"/>
+        <element name="TGM" positionX="216" positionY="189" width="128" height="30"/>
+        <element name="Token" positionX="207" positionY="171" width="128" height="120"/>
+        <element name="UserData" positionX="216" positionY="180" width="128" height="300"/>
+        <element name="VCNumber" positionX="207" positionY="240" width="128" height="30"/>
+    </elements>
+</model>
