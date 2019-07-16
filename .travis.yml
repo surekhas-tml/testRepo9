@@ -1,0 +1,22 @@
+language: objective-c
+
+xcode_workspace: i_CV_e-Guru_PROJ/e-guru.xcworkspace
+
+osx_image: xcode10.1
+
+podfile: i_CV_e-Guru_PROJ/Podfile
+
+xcode_destination: platform=iOS Simulator,OS=12.1,name=iPad Air 2 
+
+xcode_sdk: iphonesimulator10.1 
+
+cache:
+- cocoapods
+
+before_install:
+- pod install
+#echo -e "machine github.com\n  login $CI_USER_TOKEN" >> ~/.netrc
+
+script:
+- set -o pipefail
+- xcodebuild -showsdks xcodebuild clean && xcodebuild build -scheme e-guru ONLY_ACTIVE_ARCH=NO
