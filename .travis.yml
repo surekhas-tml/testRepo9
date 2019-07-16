@@ -10,6 +10,8 @@ xcode_destination: platform=iOS Simulator,OS=12.1,name=iPad Air 2
 
 xcode_sdk: iphonesimulator10.1 
 
+xcode_scheme: e-guru
+
 cache:
 - cocoapods
 
