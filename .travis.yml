@@ -17,6 +17,14 @@ before_install:
 - pod install
 #echo -e "machine github.com\n  login $CI_USER_TOKEN" >> ~/.netrc
 
+env:
+  global:
+  - |
+    - APP_NAME="e-Guru"
+    - 'DEVELOPER_NAME="GTME_ProvProf_Dev"'
+    - PROFILE_NAME="development-provisioning-profile"
+  - secure: LkVxPdasrGGP5T3Q/OLnhyGtcHS4JvmcDuyel/sECBUrum4iTsTw+CKC1KAFWqk+AkfWlv0AYwQ/Ks8ZxIrtzK5BhiHbq93qJqCzp162FzkMp4xMgyWVZQB42DVSHxDmOzLl0OOsn4DFMv6puKMjX2hEMgylIiULhXNgOkIWelTJNZWgYlncZqGUgirknVy4ANWA37v8VfUiQReBG5YyuN8xauZ6U0W6C6Eg4q2c/+Rd/nBlWz+27BMCr3AWhjWM/NEuAet4/DF+haM1eQKJTfSlb2gpkSfozbAC3FrVS7CpidgPvLGXI0jZcg+1D7hO7RDqCiUfzOn2aD59dqRxSQNayleql8iQ/Rq6pxdYvOKodaJ3nqFYKveLE8bU1dg1ZJPGDjwKH1TDtJ3ydFcqYK+WmJU0WndATEspU897DbJjkPxmTew0K+ft5EX6O8sH8IUc9LlznUlr8TQMvzTwIzwmSgfrvjbnS3XMqJBLBtw31qmKOD34Bq+/L5YGqrsaFLtQsscBONYyIibXvpC2/CP9Q+5i1rHQm1Z7pEYUuMhBQYRDp9/BtcbhcIjhjYJbVWPZ3i+WH5S8IEhRfqjthW34WXJ0a7pZf93Z4FEgHLE7xrjbVpF+9+zOvMDzEM65ADYI1OVLEdgXO7ngql2p8+onOI8pNzNqiGaQ++ZDhmM=
+before_script:
+- "./scripts/add-key.sh"
 script:
-- set -o pipefail
-- xcodebuild -showsdks xcodebuild clean && xcodebuild build -scheme e-guru ONLY_ACTIVE_ARCH=NO
+- "./scripts/build.sh"
