@@ -14,4 +14,4 @@ xcrun xcodebuild -workspace e-guru.xcworkspace -target e-guru -sdk iphonesimulat
 echo "**********************"
 echo "*     Exporting      *"
 echo "**********************"
-xcrun xcodebuild -exportArchive -archivePath ./build/Products/e-guru.xcarchive -exportOptionsPlist ./scripts/ExportOptions.plist -exportPath ./build/Products/IPA | xcpretty
+xcodebuild -showsdks xcodebuild clean && xcodebuild build -scheme e-guru ONLY_ACTIVE_ARCH=NO
