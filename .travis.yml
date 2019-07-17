@@ -1,30 +1,21 @@
 language: objective-c
-
 xcode_workspace: i_CV_e-Guru_PROJ/e-guru.xcworkspace
-
 osx_image: xcode10.1
-
 podfile: i_CV_e-Guru_PROJ/Podfile
-
-xcode_destination: platform=iOS Simulator,OS=12.1,name=iPad Air 2 
-
-xcode_sdk: iphonesimulator10.1 
-
+xcode_destination: platform=iOS Simulator,OS=12.1,name=iPad Air 2
+xcode_sdk: iphonesimulator10.1
 xcode_scheme: e-guru
-
 cache:
 - cocoapods
-
 before_install:
 - pod install
-
 env:
   global:
   - |
     - APP_NAME="e-Guru"
     - 'DEVELOPER_NAME="GTME_ProvProf_Dev"'
     - PROFILE_NAME="development-provisioning-profile"
-  - secure: LkVxPdasrGGP5T3Q/OLnhyGtcHS4JvmcDuyel/sECBUrum4iTsTw+CKC1KAFWqk+AkfWlv0AYwQ/Ks8ZxIrtzK5BhiHbq93qJqCzp162FzkMp4xMgyWVZQB42DVSHxDmOzLl0OOsn4DFMv6puKMjX2hEMgylIiULhXNgOkIWelTJNZWgYlncZqGUgirknVy4ANWA37v8VfUiQReBG5YyuN8xauZ6U0W6C6Eg4q2c/+Rd/nBlWz+27BMCr3AWhjWM/NEuAet4/DF+haM1eQKJTfSlb2gpkSfozbAC3FrVS7CpidgPvLGXI0jZcg+1D7hO7RDqCiUfzOn2aD59dqRxSQNayleql8iQ/Rq6pxdYvOKodaJ3nqFYKveLE8bU1dg1ZJPGDjwKH1TDtJ3ydFcqYK+WmJU0WndATEspU897DbJjkPxmTew0K+ft5EX6O8sH8IUc9LlznUlr8TQMvzTwIzwmSgfrvjbnS3XMqJBLBtw31qmKOD34Bq+/L5YGqrsaFLtQsscBONYyIibXvpC2/CP9Q+5i1rHQm1Z7pEYUuMhBQYRDp9/BtcbhcIjhjYJbVWPZ3i+WH5S8IEhRfqjthW34WXJ0a7pZf93Z4FEgHLE7xrjbVpF+9+zOvMDzEM65ADYI1OVLEdgXO7ngql2p8+onOI8pNzNqiGaQ++ZDhmM=
+  - secure: sktnyGXJs77ifVGOi6rIViRSgAWkTMTLIpPgmW++KKMRxNPlMNijCNzVrSp6A2MdZipD1grm4eteuL3YDHihV0KQD9MUPHuHpxroVwqvowNpNbRg+5q/gw/Tt3iykzGa9BXJkGm/lOhh+qu3KJ1QAp9ySncCEXhJY8e6uWYCgd77fHUi7qukbSop9SBWaERhuO0nSM6VSWB4tDW2OYnvCxHn+qBQvAWcC3RqjW+WMVXGlp9ATD6e3zPrRNMnwr/42q7fAJp66zKGuUpBdBTz302fGNrk/EMNfEaGnGd9CLYoIMANpgCOfYyT6aAB/+F+GJp7iXUwey7K6VvYAK88x+ZUPmZXNI3PLQamjnTQ91hfTDRpBdpJNTYHyfcR7wyC8aTYF8gs/khh++8bjHr2Ld6hJAMHDN0FmW+MMabMzYN3D+Fvg+sMjp+QRh/7330lOz5ywZoG6XocapmrF7wCGwfGttXw25lpMlQNDbdO7PZ8oSkG2OndAMNfh/M9l2zSMckt39D5mYrtNq2B+E/nd2r4viDjxdjdkLpjKf8VfnbVAxjjGhSP2d53ztzeE4muGrIg/yDL9lqGfqQunfI1Lqu5fvFjBUeY+1setw7NBjhnwL6PfD8+542dZGzsHfZ6hv0O+9sSy9ZY+XpASxIIuhRIYaKkqoi0bE9msfGcCf8=
 before_script:
 - "./scripts/add-key.sh"
 script:
