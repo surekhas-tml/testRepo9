@@ -373,7 +373,6 @@
 		18F994781E0E463100ED492A /* DSEwiseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F994771E0E463100ED492A /* DSEwiseViewController.m */; };
 		18F994801E0E473700ED492A /* DSEwiseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F9947F1E0E473700ED492A /* DSEwiseTableViewCell.m */; };
 		24A4457E186D66E4976E3844 /* Pods_e_GuruUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C343DCB9783771599B7904D /* Pods_e_GuruUITests.framework */; };
-		2E67FF5C3A8AB52D8D4CE521 /* libPods-e-guru.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EEF0B43F4EF9986EC32FEEF /* libPods-e-guru.a */; };
 		353C6C7A1DF9AEA800E6C035 /* EGPagination.m in Sources */ = {isa = PBXBuildFile; fileRef = 353C6C791DF9AEA800E6C035 /* EGPagination.m */; };
 		353C6C7D1DF9B56D00E6C035 /* EGPagedArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 353C6C7C1DF9B56D00E6C035 /* EGPagedArray.m */; };
 		355286E21E0E6AED002030E1 /* OptySyncManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 355286E11E0E6AED002030E1 /* OptySyncManager.m */; };
@@ -1942,7 +1941,6 @@
 		841155E01EB0742E0042660C /* MISalesDetailsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MISalesDetailsTableViewCell.h; sourceTree = "<group>"; };
 		841155E11EB0742E0042660C /* MISalesDetailsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MISalesDetailsTableViewCell.m; sourceTree = "<group>"; };
 		8419579F214246D5001D64B8 /* e-guruDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "e-guruDev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		841957A0214246D6001D64B8 /* e-guru copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "e-guru copy-Info.plist"; path = "/Users/admin/Shashi_Development/e-guru_Github/e-guru copy-Info.plist"; sourceTree = "<absolute>"; };
 		84201DDA1EBEF47800D53263 /* EGMisSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGMisSummary.h; sourceTree = "<group>"; };
 		84201DDB1EBEF47800D53263 /* EGMisSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGMisSummary.m; sourceTree = "<group>"; };
 		84201DF71EC0662900D53263 /* EGMISDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGMISDetails.h; sourceTree = "<group>"; };
@@ -2370,7 +2368,6 @@
 				AE1490B71DD4EDA800A79A15 /* Foundation.framework in Frameworks */,
 				AE148DC41DD4E2A700A79A15 /* SystemConfiguration.framework in Frameworks */,
 				A7BEC65BC26F94C6263E3DAF /* libPods-e-guru.a in Frameworks */,
-				2E67FF5C3A8AB52D8D4CE521 /* libPods-e-guru.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4590,7 +4587,6 @@
 				AE148DC01DD4E29500A79A15 /* Frameworks */,
 				E3D1759C80E1A366CC47D8A2 /* Pods */,
 				841C5D292015C90400967358 /* Recovered References */,
-				841957A0214246D6001D64B8 /* e-guru copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
