@@ -303,7 +303,7 @@
 		187325402221574700043E48 /* EGPotentialDropOff.m in Sources */ = {isa = PBXBuildFile; fileRef = 1873253E2221574700043E48 /* EGPotentialDropOff.m */; };
 		187325412221574700043E48 /* EGPotentialDropOff.m in Sources */ = {isa = PBXBuildFile; fileRef = 1873253E2221574700043E48 /* EGPotentialDropOff.m */; };
 		1873DF5D225C941F00A3C30C /* UINavigationController+CustomNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1873DF5C225C941F00A3C30C /* UINavigationController+CustomNavigation.m */; };
-		187935CA22E0318C00FADB45 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 187935C922E0318C00FADB45 /* Info.plist */; };
+		187935CA22E0318C00FADB45 /* fmInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 187935C922E0318C00FADB45 /* fmInfo.plist */; };
 		187E38251DF94CE300291A11 /* ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187E38241DF94CE300291A11 /* ActivityViewController.m */; };
 		187E382A1DF95FAD00291A11 /* ActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 187E38291DF95FAD00291A11 /* ActivityView.m */; };
 		187E382E1DF9601900291A11 /* ActivityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187E382D1DF9601900291A11 /* ActivityView.xib */; };
@@ -1526,7 +1526,7 @@
 		1873253F2221574700043E48 /* EGPotentialDropOff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGPotentialDropOff.h; sourceTree = "<group>"; };
 		1873DF5B225C941E00A3C30C /* UINavigationController+CustomNavigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+CustomNavigation.h"; sourceTree = "<group>"; };
 		1873DF5C225C941F00A3C30C /* UINavigationController+CustomNavigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+CustomNavigation.m"; sourceTree = "<group>"; };
-		187935C922E0318C00FADB45 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		187935C922E0318C00FADB45 /* fmInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = fmInfo.plist; sourceTree = "<group>"; };
 		187E38231DF94CE300291A11 /* ActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityViewController.h; sourceTree = "<group>"; };
 		187E38241DF94CE300291A11 /* ActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityViewController.m; sourceTree = "<group>"; };
 		187E38281DF95FAD00291A11 /* ActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityView.h; sourceTree = "<group>"; };
@@ -4946,7 +4946,7 @@
 				D57C765F1E0EA55D00E02F60 /* FMDatabaseQueue.h */,
 				D57C76601E0EA55D00E02F60 /* FMDatabaseQueue.m */,
 				D57C76611E0EA55D00E02F60 /* FMDB.h */,
-				187935C922E0318C00FADB45 /* Info.plist */,
+				187935C922E0318C00FADB45 /* fmInfo.plist */,
 				D57C76621E0EA55D00E02F60 /* FMResultSet.h */,
 				D57C76631E0EA55D00E02F60 /* FMResultSet.m */,
 			);
@@ -5208,7 +5208,7 @@
 				84223F591EA1E1D000A107D9 /* ReportIssueView.xib in Resources */,
 				71E917141DFED70A00C0F698 /* EGErrorTableViewCell.xib in Resources */,
 				84F4AF931EBA09B60012616B /* Dashboard.storyboard in Resources */,
-				187935CA22E0318C00FADB45 /* Info.plist in Resources */,
+				187935CA22E0318C00FADB45 /* fmInfo.plist in Resources */,
 				591C5AA11DEC31B600AA7330 /* DropDownViewController.xib in Resources */,
 				71354CC31DDF1BF30020F17F /* SearchContactTableViewCell.xib in Resources */,
 				9631C81B1E6894080001873E /* CompetitionDetailsView.xib in Resources */,
