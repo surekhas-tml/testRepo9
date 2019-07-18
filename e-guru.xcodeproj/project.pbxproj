@@ -5068,7 +5068,7 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = X8X83QU6QJ;
 						LastSwiftMigration = 1010;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -6833,7 +6833,7 @@
 				CODE_SIGN_ENTITLEMENTS = "e-guru/e-guru.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = X8X83QU6QJ;
 				ENABLE_BITCODE = NO;
@@ -6941,7 +6941,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tatamotors.egurucrm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = GTME_ProvProf_Dev;
 				SWIFT_OBJC_BRIDGING_HEADER = "e-Guru/Lib/e-guru-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
@@ -6959,7 +6959,7 @@
 				CODE_SIGN_ENTITLEMENTS = "e-guru/e-guru.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = X8X83QU6QJ;
 				ENABLE_BITCODE = NO;
@@ -7067,7 +7067,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tatamotors.egurucrm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = GTME_ProvProf_Dev;
 				SWIFT_OBJC_BRIDGING_HEADER = "e-Guru/Lib/e-guru-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 2;
