@@ -6,6 +6,7 @@ xcode_sdk: iphonesimulator12.1
 xcode_scheme: e-guru
 cache:
 - cocoapods
+  - bundler
 before_install:
 - pod install
 env:
@@ -23,6 +24,3 @@ before_install:
    - rvm use system
    - sudo gem install xcpretty
    - sudo gem install cocoapods
-cache:
-  - bundler
-  - cocoapods
