@@ -1,5 +1,5 @@
 language: objective-c
-xcode_workspace: i_CV_e-Guru_PROJ/e-guru.xcworkspace
+xcode_workspace: e-guru.xcworkspace
 osx_image: xcode10.1
 podfile: i_CV_e-Guru_PROJ/Podfile
 xcode_sdk: iphonesimulator12.1
