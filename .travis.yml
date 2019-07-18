@@ -19,3 +19,10 @@ before_script:
 - "./scripts/add-key.sh"
 script:
 - "./scripts/build.sh"
+before_install:
+   - rvm use system
+   - sudo gem install xcpretty
+   - sudo gem install cocoapods
+cache:
+  - bundler
+  - cocoapods
