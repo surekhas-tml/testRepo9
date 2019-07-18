@@ -10,7 +10,7 @@ cp ./scripts/profile/$PROFILE_NAME.mobileprovision ~/Library/MobileDevice/Provis
 echo "*********************"
 echo "*     Archiving     *"
 echo "*********************"
-xcrun xcodebuild clean build -workspace e-guru.xcworkspace -scheme e-guru -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 8,OS=12.1" ONLY_ACTIVE_ARCH=NO | xcpretty
+xcrun xcodebuild -workspace e-guru.xcworkspace -scheme e-guru -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
 echo "**********************"
 echo "*     Exporting      *"
 echo "**********************"
