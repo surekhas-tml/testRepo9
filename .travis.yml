@@ -18,7 +18,7 @@ env:
 before_script:
 - "./scripts/add-key.sh"
 script:
-- "./scripts/build.sh"
+- xcodebuild clean build -workspace e-guru.xcworkspace -scheme e-guru -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 8,OS=12.1" ONLY_ACTIVE_ARCH=NO | xcpretty
 before_install:
    - rvm use system
    - sudo gem install xcpretty
