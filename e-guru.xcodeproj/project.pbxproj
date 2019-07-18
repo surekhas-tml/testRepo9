@@ -1225,7 +1225,6 @@
 		D57C76671E0EA55D00E02F60 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = D57C765E1E0EA55D00E02F60 /* FMDatabasePool.m */; };
 		D57C76681E0EA55D00E02F60 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = D57C76601E0EA55D00E02F60 /* FMDatabaseQueue.m */; };
 		D57C76691E0EA55D00E02F60 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = D57C76631E0EA55D00E02F60 /* FMResultSet.m */; };
-		D57C766A1E0EA55D00E02F60 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D57C76641E0EA55D00E02F60 /* Info.plist */; };
 		D57C76721E0EAC9A00E02F60 /* VehicleApplicationDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D57C76711E0EAC9A00E02F60 /* VehicleApplicationDBHelper.m */; };
 		D57C76751E0EC8F000E02F60 /* MMGeographyDBHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = D57C76741E0EC8EE00E02F60 /* MMGeographyDBHelpers.m */; };
 		D57C76781E0EDAAD00E02F60 /* UsageCategoryDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D57C76771E0EDAAD00E02F60 /* UsageCategoryDBHelper.m */; };
@@ -5227,7 +5226,6 @@
 				849826422187331100FF51C5 /* VehicleDetails.xib in Resources */,
 				AEDA04BD1DC090E900D8B7A9 /* LaunchScreen.storyboard in Resources */,
 				59A645EF1DF1579600337CC1 /* LiveDealFieldsView.xib in Resources */,
-				D57C766A1E0EA55D00E02F60 /* Info.plist in Resources */,
 				4729E46621F9894B00662572 /* Report.storyboard in Resources */,
 				18D76FBE222E5FA8002EAB75 /* BeatPlan.storyboard in Resources */,
 				84EA3B6322006B0400D07D73 /* AdditionalView.xib in Resources */,
