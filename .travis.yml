@@ -5,27 +5,28 @@ podfile: i_CV_e-Guru_PROJ/Podfile
 xcode_sdk: iphonesimulator12.1
 xcode_scheme: e-guru
 cache:
-- cocoapods
-  - bundler
+- cocoapods - bundler
 before_install:
-- pod install
-env:
-  global:
-  - |
-    - APP_NAME="e-Guru"
-    - 'DEVELOPER_NAME="GTME_ProvProf_Dev"'
-    - PROFILE_NAME="development-provisioning-profile"
-  - secure: sktnyGXJs77ifVGOi6rIViRSgAWkTMTLIpPgmW++KKMRxNPlMNijCNzVrSp6A2MdZipD1grm4eteuL3YDHihV0KQD9MUPHuHpxroVwqvowNpNbRg+5q/gw/Tt3iykzGa9BXJkGm/lOhh+qu3KJ1QAp9ySncCEXhJY8e6uWYCgd77fHUi7qukbSop9SBWaERhuO0nSM6VSWB4tDW2OYnvCxHn+qBQvAWcC3RqjW+WMVXGlp9ATD6e3zPrRNMnwr/42q7fAJp66zKGuUpBdBTz302fGNrk/EMNfEaGnGd9CLYoIMANpgCOfYyT6aAB/+F+GJp7iXUwey7K6VvYAK88x+ZUPmZXNI3PLQamjnTQ91hfTDRpBdpJNTYHyfcR7wyC8aTYF8gs/khh++8bjHr2Ld6hJAMHDN0FmW+MMabMzYN3D+Fvg+sMjp+QRh/7330lOz5ywZoG6XocapmrF7wCGwfGttXw25lpMlQNDbdO7PZ8oSkG2OndAMNfh/M9l2zSMckt39D5mYrtNq2B+E/nd2r4viDjxdjdkLpjKf8VfnbVAxjjGhSP2d53ztzeE4muGrIg/yDL9lqGfqQunfI1Lqu5fvFjBUeY+1setw7NBjhnwL6PfD8+542dZGzsHfZ6hv0O+9sSy9ZY+XpASxIIuhRIYaKkqoi0bE9msfGcCf8=
+- rvm use system
+- brew update
+- brew outdated carthage || brew upgrade carthage
+- if brew outdated | grep -qx xctool; then brew upgrade xctool; fi
+- sudo gem install xcpretty --no-rdoc --no-ri --no-document --quiet
+- sudo gem install bundler
+- sudo gem install xcpretty
+- sudo gem install cocoapods
 before_script:
 - "./scripts/add-key.sh"
 script:
 - "./scripts/build.sh"
-before_install:
-   - rvm use system
-   - brew update
-   - brew outdated carthage || brew upgrade carthage
-   - if brew outdated | grep -qx xctool; then brew upgrade xctool; fi
-   - sudo gem install xcpretty --no-rdoc --no-ri --no-document --quiet
-   - sudo gem install bundler
-   - sudo gem install xcpretty
-   - sudo gem install cocoapods
+deploy:
+  provider: releases
+  api_key:
+    secure: gokDEV87V8608rW+iBxkWk1wTro+rw6ZhSkv2GfgIiKXx+5wW3UYCs8e4ph0YukTVk5v3p7UAQGSJINW9CA0hi0QH3LYX9QXwNTToblS3CtP0UM3p7Ce79WkNuhjEjkq0Cd2WvlsPRPptvXIVDklHWYmZS7+xx8f840VHjJg3S5I5MbRgB4BjKxUUOC52h1v3Xbqf3qHfU9iSjNXJSl4k1iDcA0uFfJz4LJei+fpWv+GNxqvXzcEWC0M8+LDRx/kzM/+kQjkrgNiphiJ2YMYoZnXGGsgNP6pk8YEHTkD57Rz4Re1ctknqCqSz1Ws/H874mNv7QvVIjlN5rlvoNcpiHPz6xZnEu923aKwsElwposYT5lPnLux1ggldO8NH4Il0m2agzC1/NPGecll1gNmo1MVj7dkaG/eob/aNKVpNZsW33rPuYknRPZG4RCYkxiiefU+T7uu45NhwLh35GW1874xrLLxUy4FnzfhWRj8zjkVg2Y4TclSVMSUGncaEcdTk51f919O8xKlq2Dq2gGOvW2DhjdrLODgnOiElrGrlLSZK3FKqWufvp4U+RxCNqrbI4JQ7VQiWWASjiJ/O8xoG6cH7Q6BVwNGkKxtESU9hRLOKBUsquKqDbMcAq1vsYqeG7FQmf2Z6vmlXWHsohp9GsE/xy1UOnRAsC526ax+Q30=
+  file: ''
+  on:
+    repo: surekhas-tml/testRepo9
+    branch: develop
+env:
+  global:
+    secure: ZxzNZP5N3e+9IHv6WaE1YyiGyrVKnwFHJeZZdcQmwFG1x5dteR+XjqDXgk+MbBR2P4nGzsVuiFWAF7tP5vjdlZ6vL9H3DEkB6CIuVaKc/ghpfB80ESF9NEJ4i/4OjNCvBAAPvQpTJlfpaGHZt2g13uxebDKZgK2RKbM3YRdfyajaIX6RTBy69f6yJXEYB473C8X4HHCLXtjkJ3B73JO20TIcYNmkU0yGvaL2a71V8sDzjlNdsgxv9M6bLY6XkZzXyV3Hj53mhYFId2hxTSyoTny4EVFyaATZPJvyMRYLAqlfwJ6E3yFhE3EfWLlHaHkKDYqcu9KFUQLkPNBisCc4cdOPmjFPf6tImQfE5fDe12vhvXVo7U7DPOmKcSYoa9sWQDcsRuGNWpi78eZ5DS4LWZ7btcy7LNAx2NGBFYHILC7GPAmSyHe6MC2rElcXjjhHevYh5rMD4UtkR6qq+0HVQlsMr+JWppolskamfxlNnGOikOpu30CFGEdfhLw6E1Fxqv139HiRdzsW6XjXtAOujQHU2W4+dw6lvQA2QaSQAc35qMpq6pb+z+oBbX27bI9KtqUgqzCCUmUIQfgdReTkuTNbKt+HA3qoAVYyoeYWk/viWynRiFrq5AxO8KzHTlS3Z79x/eMhy4iSZxTC7W218IqRge/wLyExWqR+FqZYuj8=
